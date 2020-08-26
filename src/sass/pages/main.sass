@@ -1,0 +1,487 @@
+
+.wrapper
+	display: grid
+	grid-template-columns: auto 18rem
+
+.aside-content
+	background-color: #2e2b36
+
+.content
+	background-color: #f5f5f5
+	padding: 24px
+	// display: flex
+	// flex: 1 1 auto
+
+.container
+	display: flex
+	justify-content: space-between
+
+// Header
+.main-header
+	padding-bottom: 24px
+
+.main-header, .main-header__list
+	display: flex
+	align-items: center
+	font-size: 14px
+	line-height: 16px
+	font-weight: 600
+
+.main-header__logo
+	height: 26px
+	margin-right: 32px
+
+.main-header__list
+	li
+		margin-right: 24px
+		&:last-child
+			margin-right: 0
+		a
+			color: $main-font-color
+			transition: color 300ms
+			&:hover
+				color: $accent
+
+//Match list
+.match-list
+	padding: 24px
+	border: 1px solid $border-color
+	min-width: 240px
+	height: 100%
+	font-size: 14px
+	font-weight: 600
+	line-height: 16px
+	border-radius: 3px
+
+.match-list__title
+	display: flex
+	justify-content: space-between
+	font-weight: 600
+	.title
+		font-size: 14px
+
+.match-list__line
+	width: 100%
+	height: 1px
+	background-color: $border-color
+	margin: 24px 0
+	
+.match-list__subtitle
+	color: rgba(0, 0, 0, 0.4)
+
+.match-count
+	color: rgba(0, 0, 0, 0.15)
+
+.match-count_active
+	color: rgba(0, 0, 0, 0.6)
+
+.match-list__list
+	li
+		display: flex
+		align-items: center
+		img
+			width: 16px
+			margin-right: 8px
+		margin-bottom: 16px
+		&:last-child
+			margin-bottom: 0
+
+.match-list__item
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+
+// Main content
+.main-content
+	margin-right: 24px
+	width: 100%
+
+.main-content__wrapper
+	background-color: #ffffff
+	border-radius: 1px
+	display: flex
+	flex-direction: column
+	
+
+// Content Header
+.content-header
+	padding: 0 24px
+	display: flex
+	align-items: center
+	border-bottom: 1px solid $border-color
+
+.content-header__item
+	display: flex
+	align-items: center
+	margin-right: 24px
+	height: 100%
+	line-height: 64px
+	&:last-child
+		margin-right: 0
+
+.content-header__item_active
+	transition: all 300ms
+	border-bottom: 1px solid $main-font-color
+
+	
+.content-header__link
+	display: flex
+	p
+		margin-left: 4px
+
+.link
+	color: $accent
+	transition: all 300ms
+	&:hover
+		color: $link-hover
+
+
+// All match
+.all-match
+	padding: 24px
+.all-match__title
+	font-size: 48px
+	font-weight: 500
+	line-height: 48px
+	margin-bottom: 24px
+
+.all-match__text
+	font-size: 16px
+	line-height: 24px
+	font-weight: 400
+
+.date
+	padding: 24px
+	padding-top: 0
+	display: flex
+	align-items: center
+	font-size: 24px
+	font-weight: 500
+	line-height: 28px
+
+.date__title
+	margin-right: 8px
+
+.date__subtitle
+	color: $secondary-font-color
+
+
+// Table
+.table
+	padding: 24px
+	padding-top: 0
+
+.table__title-wrap
+	display: flex
+	align-items: center
+	padding: 24px 0
+	padding-top: 0
+
+.table__title
+	font-size: 16px
+	margin-left: 8px
+
+.item__header
+	display: flex
+	align-items: center
+	padding-bottom: 8px
+	border-bottom: 1px solid $border-color
+
+.item__country, .item__league
+	display: flex
+	align-items: center
+
+.item__country
+	color: $main-font-color
+	img
+		width: 15px
+		margin-right: 8px
+
+.item__arrow
+	margin: 0 8px
+
+.item__subtitle
+	font-size: 14px
+	font-weight: 600
+	color: $secondary-font-color
+	text-align: center
+
+.item__games
+	padding-top: 12px
+
+.item__match
+	padding-bottom: 24px
+
+.item__match, .item__match-info, .item__match-stream
+	display: flex
+	align-items: center
+	font-weight: 600
+
+.item__match-info
+	width: 30%
+
+.item__match-stream, .item__match-note
+	display: flex
+	justify-content: center
+	width: 20%
+
+.item__match-rate_wrap
+	width: 10%
+	display: flex
+	justify-content: center
+
+.item__match-time
+	color: $secondary-font-color
+	margin-right: 8px
+
+.item__match-stream
+	img, svg
+		margin-right: 8px
+		&:last-child
+			margin-right: 0
+	img
+		width: 52px
+
+.svg-opacity
+	opacity: .6
+
+.item__match-note
+	a
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 32px
+		height: 32px
+		border: 1px solid #f4f4f4
+		border-radius: 3px
+		font-size: 14px
+		line-height: 16px
+
+.item__match-rate
+	border: 1px solid rgba(52, 152, 219, 0.3)
+	border-radius: 3px
+	width: 64px
+	height: 32px
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 14px
+	line-height: 16px
+
+// Blogs
+.blogs__title
+	padding: 24px 0
+
+.slider-container
+	display: flex
+
+.card
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100%
+	max-width: 240px
+	margin-right: 24px
+	&:last-child
+		margin-right: 0
+
+.card__header, .card__body
+	padding: 24px
+
+.card__header
+	background-image: url(../img/Bitmap.jpg)
+	height: 180px
+	position: relative
+	z-index: 10
+	&::before
+		content: ''
+		position: absolute
+		z-index: -1
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 71.12%)
+		transform: rotate(-180deg)
+
+.card__header-link
+	font-size: 13px
+	line-height: 14px
+	font-weight: 600
+	color: #ffffff
+	z-index: 10
+
+.card__body-link
+	color: $main-font-color
+	font-size: 20px
+	line-height: 24px
+	font-weight: 500
+
+.card__date
+	font-size: 13px
+	line-height: 16px
+	color: rgba(0, 0, 0, 0.4)
+	margin-top: 24px
+
+
+// Footer
+.main-footer
+	padding: 26px
+	background-color: #fff
+	color: rgba(0, 0, 0, 0.4)
+	display: flex
+	justify-content: space-between
+
+.main-footer__left-block, .main-footer__right-block, .main-footer__pg
+	display: flex
+	align-items: center
+	svg
+		margin-right: 8px
+
+.main-footer__copy
+	margin-right: 50px
+
+
+@media screen and (max-width: 1366px)
+	.aside-content
+		display: none
+	.wrapper
+		grid-template-columns: inherit
+
+@media screen and (max-width: 1180px)
+	// 11111111111111111111111111111111111111111111111111111111111111
+	// .blogs, .table
+	// 	display: none
+	.main-header__list
+		li
+			margin-right: 1.2em
+
+	.match-list
+		display: none
+	.main-content
+		margin-right: 0
+
+@media screen and (max-width: 992px)
+	// Mobile burger menu
+	html, body
+		overflow-x: hidden
+	.main-header
+		justify-content: space-between
+	.main-header__list_mobile
+		position: fixed
+		right: 0
+		top: 6vh
+		height: 92vh
+		flex-direction: column
+		background-color: #f5f5f5
+		padding: 24px
+		width: 100%
+		max-width: 415px
+		transform: translateX(100%)
+		transition: all 300ms
+		li
+			opacity: 0
+			border-bottom: 1px solid $accent
+			width: 100%
+			text-align: center
+			padding: 12px 0
+	.main-header__list_mobile-active
+		transform: translateX(0)
+	.mobile-main-menu
+		cursor: pointer
+		div
+			width: 24px
+			height: 2px
+			background-color: $main-font-color
+			margin-bottom: 6px
+			transition: all 300ms
+			&:last-child
+				margin-bottom: 0
+
+	@keyframes mainHeaderListFade
+		from
+			opacity: 0
+			transform: translateX(50px)
+		to
+			opacity: 1
+			transform: translateX(0px)
+
+	.toggle-burger .line1
+		transform: rotate(-45deg) translate(-5px, 6px)
+		
+	.toggle-burger .line2
+		opacity: 0
+
+	.toggle-burger .line3
+		transform: rotate(45deg) translate(-5px, -6px)
+
+
+.item__mobile, .item__mobile-stream
+	display: none
+
+@media screen and (max-width: 768px)
+	// Table mobile
+	.content, .all-match, .card__header, .card__body
+		padding: 12px
+	.match-list, .date, .table, .table__title-wrap
+		padding: 12px
+		padding-top: 0
+	.blogs__title
+		padding: 12px 0
+	.date
+		font-size: 20px
+		line-height: 24px
+	.table__title
+		font-size: 14px
+		line-height: 16px
+	.item__header
+		flex-wrap: wrap
+	.item__league
+		width: 100%
+		margin-bottom: 8px
+		font-size: 12px
+	.item__subtitle
+		font-size: 11px
+		line-height: 12px
+	.item__hide
+		display: none
+	.item__match-info_mobile
+		height: 66px
+		font-size: 12px
+	.item__match-time_mobile
+		margin-top: 24px
+	.item__mobile
+		display: block
+	.item__mobile-width
+		width: 40%
+		text-align: left
+	.item__match-rate_wrap-mobile_width
+		width: 20%
+	.item__mobile-center
+		flex-direction: column
+		align-items: start
+	.item__match-rate_wrap-mobile
+		align-items: center
+		height: 66px
+	.item__match-rate
+		width: 40px
+		height: 40px
+	.item__mobile-stream
+		display: block
+		margin-top: 10px
+		img
+			width: 52px
+			height: 15px
+	// Footer mobile
+	.main-footer
+		font-size: 12px
+		line-height: 14px
+
+@media screen and (max-width: 500px)
+	.main-footer__copy
+		margin-right: 10px
+	.main-footer__right-block
+		display: none
