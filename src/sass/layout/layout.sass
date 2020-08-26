@@ -1,12 +1,24 @@
 *
   box-sizing: border-box
+
+@font-face
+  font-family: 'Proxima Nova'
+  src: local("Proxima Nova Semibold"), local("Proxima-Nova-Semibold"), url('ProximaNova-Semibold.woff2') format("woff2"), url('ProximaNova-Semibold.woff') format("woff"), url('ProximaNova-Semibold.ttf') format("truetype")
+  font-weight: 600
+  font-style: normal
+  
+@font-face
+  font-family: 'Proxima Nova'
+  src: local("Proxima Nova Regular"), local("Proxima-Nova-Regular"), url('ProximaNova-Regular.woff2') format("woff2"), url('ProximaNova-Regular.woff') format("woff"), url('ProximaNova-Regular.ttf') format("truetype")
+  font-weight: 400
+  font-style: normal
   
 body, html
   width: 100%
   height: 100%
 
 body
-  font-family: "Roboto", sans-serif
+  font-family: "Proxima Nova", sans-serif
   line-height: 1.42
   font-size: 16px
   display: flex
