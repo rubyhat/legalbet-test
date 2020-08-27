@@ -31,16 +31,78 @@
 	height: 26px
 	margin-right: 32px
 
-.main-header__list
-	li
-		margin-right: 24px
-		&:last-child
-			margin-right: 0
-		a
-			color: $main-font-color
-			transition: color 300ms
-			&:hover
-				color: $accent
+
+.main-header__item
+	margin-right: 24px
+	&:last-child
+		margin-right: 0
+		display: flex
+		justify-content: center
+
+.main-header__link
+	display: flex
+	align-items: center
+	justify-content: center
+	color: $main-font-color
+	transition: color 300ms
+	&:hover
+		color: $accent
+.main-header__link_img
+	margin-right: 4px
+
+.main-header__link_green-note
+	position: relative
+	&:before
+		content: ''
+		width: 6px
+		height: 6px
+		border-radius: 50%
+		background-color: #62B435
+		position: absolute
+		right: -10px
+		top: -4px
+
+.main-header__avatar
+	display: flex
+	font-size: 15px
+	font-weight: 600
+	line-height: 16px
+	color: #fff
+	text-align: center
+	padding: 7px 8px
+	max-width: 32px
+	border-radius: 50%
+	background: linear-gradient(134.72deg, #3023AE 0%, #C86DD7 101.5%)
+	position: relative
+	z-index: 1
+	&:after
+		content: ''
+		background-color: #F64747
+		width: 6px
+		height: 6px
+		border: 2px solid #fff
+		border-radius: 50%
+		position: absolute
+		right: -2px
+		top: 2px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		max-width: 32px
+		max-height: 32px
+		background: linear-gradient(-134.72deg, #3023AE 0%, #C86DD7 101.5%)
+		opacity: 0
+		transition: all 300ms
+		z-index: -1
+		border-radius: 50%
+	&:hover
+		color: #fff
+		&::before
+			opacity: 1	
 
 //Match list
 .match-list
@@ -75,16 +137,15 @@
 .match-count_active
 	color: rgba(0, 0, 0, 0.6)
 
-.match-list__list
-	li
-		display: flex
-		align-items: center
-		img
-			width: 16px
-			margin-right: 8px
-		margin-bottom: 16px
-		&:last-child
-			margin-bottom: 0
+.match-list__league
+	display: flex
+	align-items: center
+	margin-bottom: 16px
+	&:last-child
+		margin-bottom: 0
+.match-list__flag
+	width: 16px
+	margin-right: 8px
 
 .match-list__item
 	width: 100%
@@ -112,24 +173,32 @@
 	align-items: center
 	border-bottom: 1px solid $border-color
 
+.content-header__mobile
+	display: none
+
 .content-header__item
 	display: flex
 	align-items: center
 	margin-right: 24px
-	height: 100%
-	line-height: 64px
+	font-size: 14px
+	padding: 22.5px 0
 	&:last-child
 		margin-right: 0
 
 .content-header__item_active
-	transition: all 300ms
 	border-bottom: 1px solid $main-font-color
+	.link
+		color: $main-font-color
+		cursor: default
+		&:hover
+			color: $main-font-color
 
 	
 .content-header__link
 	display: flex
-	p
-		margin-left: 4px
+
+.content-header__count
+	margin-left: 4px
 
 .link
 	color: $accent
@@ -195,9 +264,10 @@
 
 .item__country
 	color: $main-font-color
-	img
-		width: 15px
-		margin-right: 8px
+
+.item__country_flag
+	width: 15px
+	margin-right: 8px
 
 .item__arrow
 	margin: 0 8px
@@ -236,28 +306,32 @@
 	color: $secondary-font-color
 	margin-right: 8px
 
-.item__match-stream
-	img, svg
-		margin-right: 8px
-		&:last-child
-			margin-right: 0
-	img
-		width: 52px
+
+.item__match-stream_img
+	margin-right: 8px
+	&:last-child
+		margin-right: 0
+
+.item__match-stream_width
+	width: 38px
 
 .svg-opacity
 	opacity: .6
 
-.item__match-note
-	a
-		display: flex
-		align-items: center
-		justify-content: center
-		width: 32px
-		height: 32px
-		border: 1px solid #f4f4f4
-		border-radius: 3px
-		font-size: 14px
-		line-height: 16px
+.item__match-note_count
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 32px
+	height: 32px
+	border: 1px solid #f4f4f4
+	border-radius: 3px
+	font-size: 14px
+	line-height: 16px
+	transition: all 300ms
+	&:hover
+		background-color: $accent
+		color: #fff
 
 .item__match-rate
 	border: 1px solid rgba(52, 152, 219, 0.3)
@@ -269,6 +343,11 @@
 	justify-content: center
 	font-size: 14px
 	line-height: 16px
+	transition: all 300ms
+	cursor: pointer
+	&:hover
+		background-color: $accent
+		color: #fff
 
 // Blogs
 .blogs__title
@@ -338,8 +417,9 @@
 .main-footer__left-block, .main-footer__right-block, .main-footer__pg
 	display: flex
 	align-items: center
-	svg
-		margin-right: 8px
+
+.main-footer__img
+	margin-right: 8px
 
 .main-footer__copy
 	margin-right: 50px
@@ -355,9 +435,8 @@
 	// 11111111111111111111111111111111111111111111111111111111111111
 	// .blogs, .table
 	// 	display: none
-	.main-header__list
-		li
-			margin-right: 1.2em
+	.main-header__item
+		margin-right: 1.2em
 
 	.match-list
 		display: none
@@ -371,10 +450,11 @@
 	.main-header
 		justify-content: space-between
 	.main-header__list_mobile
-		position: fixed
+		position: absolute
+		z-index: 1
 		right: 0
 		top: 6vh
-		height: 92vh
+		height: 94vh
 		flex-direction: column
 		background-color: #f5f5f5
 		padding: 24px
@@ -382,24 +462,31 @@
 		max-width: 415px
 		transform: translateX(100%)
 		transition: all 300ms
-		li
-			opacity: 0
-			border-bottom: 1px solid $accent
-			width: 100%
-			text-align: center
-			padding: 12px 0
+		overflow-y: auto
+	.main-header__item
+		opacity: 0
+		border-bottom: 1px solid $accent
+		width: 100%
+		text-align: center
+		padding: 12px 0
+	.main-header__link_green-note
+		margin: 0 auto
+		max-width: 94px
+		&:before
+			top: -3px
+			right: -6px
 	.main-header__list_mobile-active
 		transform: translateX(0)
 	.mobile-main-menu
 		cursor: pointer
-		div
-			width: 24px
-			height: 2px
-			background-color: $main-font-color
-			margin-bottom: 6px
-			transition: all 300ms
-			&:last-child
-				margin-bottom: 0
+	.line1, .line2, .line3
+		width: 24px
+		height: 2px
+		background-color: $main-font-color
+		margin-bottom: 6px
+		transition: all 300ms
+		&:last-child
+			margin-bottom: 0
 
 	@keyframes mainHeaderListFade
 		from
@@ -424,11 +511,15 @@
 
 @media screen and (max-width: 768px)
 	// Table mobile
-	.content, .all-match, .card__header, .card__body
-		padding: 12px
+	.content
+		padding: 16px
+	.all-match, .card__header, .card__body
+		padding: 16px
 	.match-list, .date, .table, .table__title-wrap
-		padding: 12px
+		padding: 16px
 		padding-top: 0
+	.table__title-wrap
+		padding-left: 0
 	.blogs__title
 		padding: 12px 0
 	.date
@@ -473,15 +564,45 @@
 		display: block
 		margin-top: 10px
 		img
-			width: 52px
-			height: 15px
+			width: 38px
 	// Footer mobile
 	.main-footer
 		font-size: 12px
 		line-height: 14px
 
-@media screen and (max-width: 500px)
+@media screen and (max-width: 700px)
 	.main-footer__copy
 		margin-right: 10px
 	.main-footer__right-block
 		display: none
+	.all-match__title
+		font-size: 20px
+		line-height: 24px
+		margin-bottom: 12px
+	.all-match__text
+		font-size: 14px
+	.content-header__hide
+		display: none
+	.nav
+		position: relative
+		height: 48px
+		overflow: hidden
+	.content-header__mobile
+		display: flex
+		flex-grow: 1
+		position: absolute
+		overflow-x: auto
+		width: 100%
+		padding: 0 12px
+	.content-header__item
+		padding: 13.5px 0
+		&:last-child
+			padding-right: 12px
+	.content-header__link
+		white-space: nowrap
+		display: block
+
+@media screen and (max-width: 320px)
+	.main-header__list_mobile
+		top: 10vh
+		height: 90vh
