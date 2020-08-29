@@ -23,3 +23,27 @@ const navSlide = () => {
 }
 
 navSlide()
+
+// Слайдер Swiperjs
+const slider = document.querySelector('.swiper-container')
+const wrapper = document.querySelector('.swiper-wrapper')
+
+let mySwiper = new Swiper(slider, {
+  slidesPerView: 2, // Количество отображаемых слайдов
+  spaceBetween: 12, // Расстояние между слайдами
+  mousewheel: true, // Переключение слайдов через колесо мыши
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    },
+    1060: {
+      slidesPerView: 4,
+      spaceBetween: 24
+    },
+  }
+})
