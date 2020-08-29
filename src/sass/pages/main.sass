@@ -1,11 +1,20 @@
 
 .wrapper
 	display: flex
-	// flex-direction: column
 	// grid-template-columns: auto 18rem
 
+@media screen and (max-width: 1366px)
+	.wrapper
+		display: block
+
+.content__wrapper
+	display: flex
+	flex-direction: column
+	// min-height: 100%
+	// flex: 1 1 auto
+
 .aside-content
-	width: 30%
+	width: 40%
 	height: 100%
 	background-color: #2e2b36
 
@@ -14,7 +23,7 @@
 	padding: 24px
 	width: 100%
 	// display: flex
-	flex: 1 1 auto
+	// flex: 1 1 auto
 
 .container
 	display: flex
@@ -394,7 +403,7 @@
 
 .slider-container
 	display: flex
-	max-width: 1024px
+	max-width: 1330px
 	position: relative
 
 @media screen and (max-width: 414px)
@@ -547,7 +556,7 @@
 	.main-header
 		justify-content: space-between
 	.main-header__list_mobile
-		position: absolute
+		position: fixed
 		z-index: 1
 		right: 0
 		top: 6vh
@@ -559,7 +568,7 @@
 		max-width: 415px
 		transform: translateX(100%)
 		transition: all 300ms
-		overflow-y: auto
+		overflow-x: auto
 	.main-header__item
 		opacity: 0
 		border-bottom: 1px solid $accent
@@ -680,7 +689,7 @@
 		font-size: 14px
 	.content-header__hide
 		display: none
-	.nav
+	.main-content-nav
 		position: relative
 		height: 48px
 		overflow: hidden
