@@ -19,6 +19,7 @@
 .aside-content
 	width: 30%
 	min-width: 286px
+	max-width: 360px
 	height: 100%
 	background-color: #2e2b36
 
@@ -215,9 +216,9 @@
 		&:hover
 			color: $main-font-color
 
-	
 .content-header__link
 	display: flex
+	font-weight: 600
 
 .content-header__count
 	margin-left: 4px
@@ -257,7 +258,6 @@
 
 .date__subtitle
 	color: $secondary-font-color
-
 
 // Table
 .table
@@ -600,7 +600,6 @@
 .main-footer__copy
 	margin-right: 50px
 
-
 @media screen and (max-width: 1300px)
 	.aside-content
 		display: none
@@ -657,7 +656,7 @@
 		transform: translateX(0)
 	.mobile-main-menu
 		cursor: pointer
-	.line1, .line2, .line3
+	.mobile-main-menu__burger
 		width: 24px
 		height: 2px
 		background-color: $main-font-color
@@ -674,15 +673,14 @@
 			opacity: 1
 			transform: translateX(0px)
 
-	.toggle-burger .line1
+	.toggle-burger .mobile-main-menu__burger_line_one
 		transform: rotate(-45deg) translate(-5px, 6px)
 		
-	.toggle-burger .line2
+	.toggle-burger .mobile-main-menu__burger_line_two
 		opacity: 0
 
-	.toggle-burger .line3
+	.toggle-burger .mobile-main-menu__burger_line_three
 		transform: rotate(45deg) translate(-5px, -6px)
-
 
 .item__mobile, .item__mobile-stream
 	display: none
@@ -781,7 +779,6 @@
 	.content-header__link
 		white-space: nowrap
 		display: block
-
 
 @media screen and (max-width: 520px)
 	.item__mobile-width	
