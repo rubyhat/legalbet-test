@@ -28,6 +28,9 @@ navSlide()
 const slider = document.querySelector('.swiper-container')
 const wrapper = document.querySelector('.swiper-wrapper')
 
+const prevBtn = document.querySelector('.swiper-button-prev')
+const nextBtn = document.querySelector('.swiper-button-next')
+
 let mySwiper = new Swiper(slider, {
   slidesPerView: 2, // Количество отображаемых слайдов
   spaceBetween: 12, // Расстояние между слайдами
@@ -45,5 +48,26 @@ let mySwiper = new Swiper(slider, {
       slidesPerView: 4,
       spaceBetween: 24
     },
+  },
+  on: { // Поведение боковых градиентов в слайдере
+    fromEdge: function() {
+      //console.log('hello-world')
+      slider.classList.add('swiper-container-after')
+      slider.classList.remove('swiper-container-before')
+    },
+    toEdge: function () {
+      //console.log('bye-world')
+    }, 
+    reachBeginning: function () {
+      //console.log('start')
+      slider.classList.remove('swiper-container-after')
+    },
+    reachEnd: function () {
+      //console.log('end')
+      slider.classList.add('swiper-container-before')
+    }
   }
 })
+
+
+

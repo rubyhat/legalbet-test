@@ -475,6 +475,7 @@
 		z-index: 1
 		background: linear-gradient(90deg, rgba(244, 244, 244, 0.0001) 0.77%, #F4F4F4 75.52%)
 		width: 10%
+		opacity: 1
 	&:after
 		content: ''
 		position: absolute
@@ -486,6 +487,31 @@
 		width: 10%
 		transform: rotate(180deg)
 		opacity: 0
+
+.swiper-container-before
+	&:before
+		content: ''
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		z-index: 1
+		background: linear-gradient(90deg, rgba(244, 244, 244, 0.0001) 0.77%, #F4F4F4 75.52%)
+		width: 10%
+		opacity: 0
+
+.swiper-container-after
+	&:after
+		content: ''
+		position: absolute
+		left: 0px
+		top: 0
+		bottom: 0
+		z-index: 1
+		background: linear-gradient(90deg, rgba(244, 244, 244, 0.0001) 0.77%, #F4F4F4 75.52%)
+		width: 10%
+		transform: rotate(180deg)
+		opacity: 1
 
 @media screen and (max-width: 768px)
 	.swiper-container
